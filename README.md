@@ -1,4 +1,6 @@
 ### shorty is simple url shortner 
+Demo : http://calm-meadow-6186.herokuapp.com/
+
 ![alt shorty](https://mediacru.sh/download/8p5DPC3cJ712.png)
 
 
@@ -12,9 +14,9 @@ rails server
 ````
 
 ### config .
-1 . open admins model and uncomment registrable 
-2 . enter recaptcha credentials in `config/initializers/recaptcha.rb`
-
+1. create admin using `rails c` (console ) 
+2. enter recaptcha credentials in `config/initializers/recaptcha.rb`
+3. start develpment server `rails s`   
 then open your browser and point to `localhost:3000` 
 
 ### to-do 
