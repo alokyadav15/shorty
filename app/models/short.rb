@@ -12,8 +12,8 @@ before_create :setup_short
 
 validates_uniqueness_of :slug
 validates_presence_of :full , :message =>  "Please Provide  a valid  URL"
-validates :slug, length: { maximum: 6 }
-validates :full, length: { maximum: 100 }
+validates :slug, length: { maximum: 25 }
+validates :full, length: { maximum: 250 }
 
 private 
 def process_url
