@@ -1,5 +1,5 @@
 class ShortsController < ApplicationController
-  before_action :authenticate_admin!, only: [:edit, :destroy]
+  before_action :authenticate_admin!, only: [:edit, :destroy, :index]
   before_action :set_short, only: [:show, :edit, :update, :redirect ,:destroy]
 
   # GET /shorts
