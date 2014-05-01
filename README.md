@@ -1,4 +1,6 @@
 ### shorty is simple url shortner 
+![alt shorty](https://mediacru.sh/download/8p5DPC3cJ712.png)
+
 
 ````bash
 git clone git@github.com:alokyadav15/shorty.git shorty
