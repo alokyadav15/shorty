@@ -1,0 +1,30 @@
+<%= form_for(@short, :html => {  :class => "form"}) do |f| %>
+  <% if @short.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@short.errors.count, "error") %> prohibited this short from being saved:</h2>
+
+      <ul>
+      <% @short.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="full">
+    <%= f.text_field :full , :class => "form_input"  %>
+    <br />
+  </div>
+  <div class="short">
+    <%= f.text_field :short , :class => "form_input"  %>
+    <br />
+  </div>
+  <div class="slug">
+    <%= f.text_field :slug , :class => "form_input" %>
+    <br />
+  </div>
+  <div class="actions">
+  <br />
+    <%= f.submit :class => "pure-button" %>
+  </div>
+<% end %>

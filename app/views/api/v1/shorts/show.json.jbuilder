@@ -1,0 +1,1 @@
+json.extract! @short, :full, :short, :slug, :created_at, :updated_at

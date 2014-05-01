@@ -1,0 +1,28 @@
+<%= form_for(@short, :html => {  :class => "form"}) do |f| %>
+  <% if @short.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @short.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="pure-input-2-3">
+    <%= f.text_field :full , :class => "form_input" , :placeholder => "Long Url " %>
+    <br />
+  </div>
+  <br />
+  <div class="headerwa"><span>custom url option ( click to hide )</span>
+
+  </div>
+  <div class="slug" id="content">
+    <%= f.text_field :slug , :class => "form_input2", :placeholder => "custom short slug (optional) " %>
+    <br />
+  </div>
+  <div class="actions">
+  <br />
+    <%= f.submit :class => "pure-button" %>
+  </div>
+<% end %>
