@@ -22,3 +22,5 @@ config/initializers/recaptcha.rb
 config/initializers/recaptcha.rb
 
 config/initializers/recaptcha_sample.rb
+
+app/models/admin.rb
