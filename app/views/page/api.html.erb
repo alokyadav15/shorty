@@ -1,0 +1,64 @@
+<style type="text/css">
+	#docs {
+		text-align: left;
+	}
+	#docs pre	{
+		border: 1px solid black;
+		padding-left: 10px;
+	}
+</style>
+<div id="api_docs">
+	<h2>
+		API Documentation 
+	</h2>
+	<div id="docs">
+		First Use <%= link_to "THIS PAGE " , new_user_path %>   to get your API Authorization Token 
+		<p>
+			IN your request Header use without that you will 401
+		</p>
+
+		<h3> API  Request URL [ POST ] </h3>
+
+		<pre>
+
+<%= root_url %> 
+		
+		</pre>
+
+		<h3> Request Header </h3>
+<pre>
+
+Content-Type	:	Application/json
+Authorization	:	Token "YOUR_TOKEN_GOES_HERE" 			
+
+</pre>
+		<br />
+		<p>
+			<h3> JSON request Format : </h3>
+<pre>
+
+{
+"short":
+	{
+	"full":"http://stackoverflow.com",
+	"slug":"forum"
+	}
+}
+
+</pre>
+	<code>slug</code> field is optional , you can use that as custom URL option 
+	<h3> Response </h3>
+<pre>
+
+{
+	"full": "http://stackoverflow.com",
+	"short": "/forum",
+	"slug": "forum",
+	"created_at": "2014-05-03T18:27:55.733Z",
+	"updated_at": "2014-05-03T18:27:55.733Z"
+}
+
+</pre>
+</p>
+</div>
+</div>
