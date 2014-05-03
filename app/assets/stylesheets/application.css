@@ -13,31 +13,80 @@
  *= require_tree .
  *= require_self
  */
- body {
-  text-align: center;
- }
-#main ul li {
-	
-    list-style: none;
 
+body {
+    background: #fff;
+    margin: 10px;
+    }
+
+/*main content area */
+
+#main {
+    display: block;
+    margin: auto auto 20px auto;
+    text-align: center;
+    }
+
+
+/*flash messages */
+
+#flash {
+    border : 1px solid black;
 }
-.container {
-    width:100%;
-    border:1px solid #d3d3d3;
+
+
+/*header text decoration */
+#head_text:hover  {
+    text-decoration: none;
+    color: black;
 }
-.container div {
-    width:100%;
+#head_text:visited  {
+    text-decoration: none;
+    color: black;
 }
-.container .header {
-    background-color:#d3d3d3;
-    padding: 2px;
-    cursor: pointer;
-    font-weight: bold;
+#head_text:link  {
+    text-decoration: none;
+    color: black;
 }
-.container .content {
-    display: none;
-    padding : 5px;
+
+/*forms and inputs*/
+
+form {
+   padding: 20px;
+   margin-bottom: 20px;
 }
+
+.form_input {
+padding: 7px;
+width: 60%;
+font-size: 13px;
+}
+.form_input2 {
+    padding: 5px;
+    width: 15%;
+    margin-top: 15px;
+}
+
 .headerwa {
     cursor: pointer;
-    }
+    text-decoration: underline;
+    width: 250px;
+    margin: auto;
+}
+#error_explanation ul li {
+    text-decoration: none;
+    list-style: none;
+    border: 1px solid black;
+    padding: 20px;
+    width: 250px;
+    margin: auto;
+}
+
+#about {
+    text-align: left !important;
+    font-size: 20px;
+}
+#footer {
+    margin: 0em auto;
+    text-align: center;
+}

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 	root :to => "shorts#new"
 	
 	match '/about' => "page#about", :via => ['get']
+	match '/api' => "page#api", :via => ['get'] , :as => :api_doc
 	match '/contact' => "page#contact" , :via => ['get']
 	match '/report' => "page#report" , :via => ['get']
 	match "/:id" => "shorts#redirect" , :via => ['get']

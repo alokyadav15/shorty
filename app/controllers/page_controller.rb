@@ -9,5 +9,9 @@ class PageController < ApplicationController
 	def report
 		
 	end
+
+	def api
+		
+	end
 	
 end

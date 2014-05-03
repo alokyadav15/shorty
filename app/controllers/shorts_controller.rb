@@ -30,7 +30,7 @@ class ShortsController < ApplicationController
     @short.short = "http://#{request.host_with_port.to_s}"
     respond_to do |format|
       if @short.save
-        format.html { redirect_to @short, notice: 'Short was successfully created.' }
+        format.html { redirect_to @short, notice: 'URL has been shorted successfully' }
         format.json { render :show, status: :created, location: @short }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class ShortsController < ApplicationController
   def update
     respond_to do |format|
       if @short.update(short_params)
-        format.html { redirect_to @short, notice: 'Short was successfully updated.' }
+        format.html { redirect_to @short, notice: 'URL has been updated successfully' }
         format.json { render :show, status: :ok, location: @short }
       else
         format.html { render :edit }

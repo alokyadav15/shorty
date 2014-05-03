@@ -8,29 +8,9 @@
 </head>
 <body>
  	<div id="main">
- 		<ul>
-      <% if admin_signed_in? %>
-        <li>
-          <%= link_to('Logout', destroy_admin_session_path, :method => :delete) %>   
-          <%= current_admin.email %>
-        </li>
-        <li>
-          <%= link_to "Users", users_path %> 
-          <%= link_to "shorts", shorts_path %> 
-        </li>
-    <% end %>
-    <% if flash[:alert] %>
-    <p class="flash-error"><%= flash[:alert] %></p>
-    <% end %>
-    <% if flash[:notice] %>
-    <p class="flash-notice"><%= flash[:notice] %></p>
-    <% end %>
+    <%= render "shared/header" %> 
 		<%= yield %>
-    <%= link_to "Home", root_path %>
-    <%= link_to "API" , new_user_path %> 
-    <%= link_to "Contact" , contact_path %> 
-    <%= link_to "Report" , report_path%> 
-    <%= link_to "About" , about_path%> 
+    <%= render "shared/footer" %>  
 	</div>
 </body> 
 </html>
