@@ -11,6 +11,7 @@ class ShortsController < ApplicationController
   # GET /shorts/1
   # GET /shorts/1.json
   def show
+    @plain_url = Short.decrypt(@short)
   end
 
   # GET /shorts/new
@@ -60,7 +61,8 @@ class ShortsController < ApplicationController
    if @short.nil?
      redirect_to "/"
    else
-     redirect_to @short.full
+     @plain_url = Short.decrypt(@short)
+     redirect_to @plain_url
    end
  end
 

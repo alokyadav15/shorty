@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="full">
-    <%= f.text_field :full , :class => "form_input"  %>
+    <%= f.text_field :full , :class => "form_input" , :value => Short.decrypt(@short)  %>
     <br />
   </div>
   <div class="short">

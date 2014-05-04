@@ -7,10 +7,13 @@ module Api
 			respond_to :json
 
 			def show
+				# raise
+				@short = Short.where(:slug => params[:slug]).first
+				@plain_url = Short.decrypt(@short)
 			end
-
 			def create
 				@short = Short.new(short_params)
+    			@short.short = "http://#{request.host_with_port.to_s}"
 				respond_to do |format|
 			      if @short.save
 			        format.json { render :show, status: :created, location: @short }

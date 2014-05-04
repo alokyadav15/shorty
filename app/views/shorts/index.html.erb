@@ -13,7 +13,7 @@
   <tbody>
     <% @shorts.each do |short| %>
       <tr>
-        <td><%= short.full %></td>
+        <td><%= Short.decrypt(short) %></td>
         <td><%= short.short %></td>
         <td><%= short.slug %></td>
         <td><%= link_to 'Show', short %></td>
