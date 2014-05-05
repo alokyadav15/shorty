@@ -1,9 +1,31 @@
 <form class="form">
 	<div>
+	</div>
+	<p>
+		Shorted URL
+	</p>
+	<input type="text" class="form_input" value="<%= @short.short %>" />
+	<br />
+	<% if session[:delete_token] && @short.delete_token === session[:delete_token]  %> 	
+			<p>  <br />
+			 	Delete Token : <input type="text" class="form_input2" value="<%= session[:delete_token] %>" /> 
+			 </p>
+	<% elsif admin_signed_in?		 -%>
+			<p>  <br />
+			 	Delete Token : <input type="text" class="form_input2" value="<%= @short.delete_token %>" /> 
+			</p>
+	<% end -%>
+	<div>
 		<p>
 			full url : <%= @plain_url %> 
 		</p>
 	</div>
-	<input type="text" class="form_input" value="<%= @short.short %>" />
 </form>
+<br />
+<p>
+	Deleting shorted urls require delete token 
+</p>
+<%= link_to "Delete This Short", delete_path(@short) %> 
+
+<br />
 <br />

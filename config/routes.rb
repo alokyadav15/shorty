@@ -12,7 +12,8 @@ Rails.application.routes.draw do
 	end
 	resources :shorts , :path => "/s" 
 	resources :users , :path => "/a"
-	root :to => "shorts#new"
+	root :to => "shorts#new" 
+	match 's/:id/delete' => "shorts#delete" , :via => ['get','post','delete'] , :as => :delete
 	
 	match '/about' => "page#about", :via => ['get']
 	match '/api' => "page#api", :via => ['get'] , :as => :api_doc

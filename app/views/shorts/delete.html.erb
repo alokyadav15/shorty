@@ -1,0 +1,11 @@
+<div id="del">
+	<h3>Delete Shorted URL</h3>
+	<p>
+		<%= form_tag delete_path do  %>
+				<%= text_field_tag :delete_token %> <br />
+					<%= submit_tag "Delete It " %> 
+		<% end -%> 
+	</p>
+</div>
+
+for <%= @short.short %> 

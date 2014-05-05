@@ -6,6 +6,7 @@
       <th>Full</th>
       <th>Short</th>
       <th>Slug</th>
+      <th>Delete Token</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
         <td><%= Short.decrypt(short) %></td>
         <td><%= short.short %></td>
         <td><%= short.slug %></td>
+        <td><%= short.delete_token %></td>
         <td><%= link_to 'Show', short %></td>
         <td><%= link_to 'Edit', edit_short_path(short) %></td>
         <td><%= link_to 'Destroy', short, method: :delete, data: { confirm: 'Are you sure?' } %></td>
