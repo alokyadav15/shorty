@@ -34,7 +34,7 @@ class UsersController < ApplicationController
       @user = User.where(:email => user_params["email"]).first
         # if email exists sending email or if not then adding new user 
         if @user === nil
-          @user = User.create!(user_params)
+          @user = User.create(user_params)
           if @user.save 
             UserMailer.token_email(@user).deliver
             redirect_to root_path , :notice => "Api token sent , check your inbox "
