@@ -1,5 +1,4 @@
 ### shorty is simple url shortner 
-Demo : http://calm-meadow-6186.herokuapp.com/
 
 ![alt shorty](https://mediacru.sh/download/8p5DPC3cJ712.png)
 
