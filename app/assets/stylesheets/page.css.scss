@@ -1,3 +1,21 @@
 // Place all the styles related to the page controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#api_form {
+	width:500px;
+	margin : 0 auto ;
+	border : 1px solid black;
+}
+.field {
+    padding: 18px;
+}
+#recaptcha_area {
+	margin:0 auto;
+	padding:10px;
+}
+#user_email {
+	height : 10px;
+	padding:5px;
+	width:50%;
+}

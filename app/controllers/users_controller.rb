@@ -36,14 +36,14 @@ class UsersController < ApplicationController
         if @user === nil
           @user = User.create(user_params)
           if @user.save 
-            UserMailer.token_email(@user).deliver
+            UserMailer.delay.token_email(@user)
             redirect_to root_path , :notice => "Api token sent , check your inbox "
           else
             render "new", :notice => "something is wrong "
           end
         else
           # if user  not nill means it found some data in our database 
-          UserMailer.token_email(@user).deliver
+          UserMailer.delay.token_email(@user)
           redirect_to root_path , :notice => "Api Token sent , check your inbox "
         end
     end
